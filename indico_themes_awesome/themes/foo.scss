@@ -1,0 +1,11 @@
+@import 'base/palette';
+
+$lcc-dark-red: #660922;
+$header-bg-color: $light-gray;
+$header-icon-color: $lcc-dark-red;
+$header-text-color: $black;
+
+@import 'themes/indico';
+
+/*@include header-logo('/static/plugins/awesome_themes/awesome-logo.png', 50px 35px);*/
+@include header-logo('themes_awesome:awesome-logo.png', 50px 35px);
