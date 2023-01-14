@@ -1,5 +1,25 @@
 # indico-plugin-themes-awesome
 
+<img src="https://github.com/indico/indico/raw/master/indico/web/static/images/logo_indico.png"
+     align="right"
+     width="300"
+     style="width: 300px; float: right; margin-right: 50px;">
+
+**Indico** is:
+ * 🗓 a general-purpose **event management** tool;
+ * 🌍 fully **web-based**;
+ * 🧩 **feature-rich** but also **extensible** through the use of [plugins](https://docs.getindico.io/en/stable/plugins/);
+ * ⚖️ **Open-Source** Software under the MIT License;
+ * <img src="https://raw.githubusercontent.com/indico/assets/master/cern_badge.png" width="20"> **made at CERN**, [the place where the web was born](https://home.cern/science/computing/birth-web)!
+
+![A sneak peek of Indico](https://raw.githubusercontent.com/indico/indico/master/sneakpeek.gif)
+
+## What Indico version is supported?
+
+ * [v3.2.2](https://pypi.org/project/indico/3.2.2/).
+
+## What does it do this plugin?
+
 This repository holds the Indico Plugin Themes used for the Indico deployment
 
 - Awesome Themes, inspired by him [ThiefMaster's Github Gist](https://gist.github.com/ThiefMaster/8d5bc6791d8654b31f0ec3a5960693ad) post.
