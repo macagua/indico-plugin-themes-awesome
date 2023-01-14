@@ -1,24 +1,22 @@
-#from __future__ import unicode_literals
-
 import os
 
-from flask.helpers import get_root_path
-
-from indico.core.signals.plugin import get_event_themes_files
+from indico.core import signals
 from indico.core.plugins import IndicoPlugin, IndicoPluginBlueprint
+
 
 class AwesomeThemesPlugin(IndicoPlugin):
     """Awesome Themes
-    Provides event themes for Awesome Events.
+
+    Provides event themes for Awesome.
     """
 
     def init(self):
-        super(AwesomeThemesPlugin, self).init()
-        self.connect(get_event_themes_files, self._get_themes_yaml)
+        super().init()
+        self.connect(signals.plugin.get_event_themes_files, self._get_themes_yaml)
 
     def get_blueprints(self):
         return IndicoPluginBlueprint(self.name, __name__)
 
     def _get_themes_yaml(self, sender, **kwargs):
-        return os.path.join(get_root_path('indico_themes_awesome'), 'themes.yaml')
+        return os.path.join(self.root_path, 'themes-awesome.yaml')
 
