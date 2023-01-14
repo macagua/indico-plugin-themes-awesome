@@ -43,3 +43,9 @@ The previous command generate a list the available plugins to use into Indico:
 +-------------------+------------------------------------+
 ```
 
+For execute the migrations command for the installed plugin with the following command:
+
+```
+indico db --plugin themes_awesome upgrade
+```
+
