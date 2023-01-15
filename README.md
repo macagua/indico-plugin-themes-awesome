@@ -22,7 +22,7 @@
 
 This repository holds the Indico Plugin Themes used for the Indico deployment
 
-- Awesome Themes, inspired by him [ThiefMaster's Github Gist](https://gist.github.com/ThiefMaster/8d5bc6791d8654b31f0ec3a5960693ad) post.
+- Awesome Themes, inspired by the [ThiefMaster's Github Gist](https://gist.github.com/ThiefMaster/8d5bc6791d8654b31f0ec3a5960693ad) post.
 
 ## Installing Indico software
 
