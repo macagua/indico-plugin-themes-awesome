@@ -22,7 +22,7 @@
 
 This repository holds the Indico Plugin Themes used for the Indico deployment
 
-- Awesome Themes, inspired by the [ThiefMaster's Github Gist](https://gist.github.com/ThiefMaster/8d5bc6791d8654b31f0ec3a5960693ad) post.
+- Awesome Theme for Indico Events, inspired by the [ThiefMaster's Github Gist](https://gist.github.com/ThiefMaster/8d5bc6791d8654b31f0ec3a5960693ad) post.
 
 ## Installing Indico software
 
@@ -68,4 +68,13 @@ For execute the migrations command for the installed plugin with the following c
 ```
 indico db --plugin themes_awesome upgrade
 ```
+
+You can check the Awesome Themes Plugin installation go to ``Administration`` > ``Plugins`` > ``Other``,
+then if exists an ``Awesome Themes`` reference, is ok installed it.
+
+## Use it
+
+To use the Awesome Theme for an Event, create an Event and save it, then go to the *management area of this event* >
+``Customization`` > ``Layout`` > ``Timetable`` > ``Theme`` here you can select the ``Foo Theme`` option, and got to
+click on Save button at the **Theme** section botton.
 
