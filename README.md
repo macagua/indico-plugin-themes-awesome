@@ -105,8 +105,8 @@ pyenv install 3.9.16
 pyenv local 3.9.16
 python -m venv --upgrade-deps venv
 source ./venv/bin/activate
-(venv) $ pip install -U pip setuptools wheel
-(venv) $ cd ./src && pip install -e '.[dev]' && npm ci
+(venv) pip install -U pip setuptools wheel
+(venv) cd ./src && pip install -e '.[dev]' && npm ci
 ```
 
 Add Plugins configurations into ``indico.conf`` file, executing the following command:
@@ -126,14 +126,14 @@ Copying the Wheel Package generated to the Indico Production environment, execut
 
 ```
 cp ../dist/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
-$ sudo chown indico:www-data /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
-$ sudo chmod 750 /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
+sudo chown indico:www-data /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
+sudo chmod 750 /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
 ```
 
 Inside the Indico Production environment, install the Wheel Package, executing the following command:
 
 ```
-(indico) $ pip install /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
+(indico) pip install /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
 ```
 
 ## Use it
