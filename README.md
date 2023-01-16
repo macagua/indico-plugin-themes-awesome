@@ -2,9 +2,11 @@
 
 A [Indico Software](https://getindico.io/) Plugin for Demonstration how to create a Theme Plugin.
 
+
 ## Screenshots
 
 Following are some screenshots about Awesome Theme:
+
 
 ### Timetable view for Events
 
@@ -12,9 +14,11 @@ Following are some screenshots about Awesome Theme:
 
 **Timetable View for Events**
 
+
 ## What Indico version is supported?
 
  * [v3.2.2](https://pypi.org/project/indico/3.2.2/).
+
 
 ## What does it do this plugin?
 
@@ -76,6 +80,61 @@ then if exists an ``Awesome Themes`` reference, is ok installed it.
 
 **Plugins Administration View**
 
+
+## Build Wheel Package
+
+This Theme Plugin use SASS Styles then you need build the CSS/JS assets compiled and minified.
+You need to use a local [development](https://docs.getindico.io/en/stable/installation/development/)
+environment to build wheel package and then copy just the wheel package generated to production
+in order to install it there.
+
+Create directory and download source codes, executing the following command:
+
+```
+mkdir -p ~/dev/indico/plugins
+cd ~/dev/indico/
+git clone https://github.com/indico/indico.git -b master src
+git clone https://github.com/indico/indico-plugins.git -b master plugins/base
+git clone https://github.com/macagua/indico-plugin-themes-awesome.git -b main plugins/indico-plugin-themes-awesome
+```
+
+Create virtual environment and install Python packages, executing the following command:
+
+```
+pyenv install 3.9.16
+pyenv local 3.9.16
+python -m venv --upgrade-deps venv
+source ./venv/bin/activate
+(venv) $ pip install -U pip setuptools wheel
+(venv) $ cd ./src && pip install -e '.[dev]' && npm ci
+```
+
+Add Plugins configurations into ``indico.conf`` file, executing the following command:
+
+```
+(venv) echo -e "\n# List of plugins to be loaded on server start.\n#" >> ./src/indico/indico.conf
+(venv) echo -e "PLUGINS = {'themes_awesome'}" >> ./src/indico/indico.conf
+```
+
+Build the Wheel Package for this theme, executing the following command:
+
+```
+(venv) ./src/bin/maintenance/build-wheel.py plugin $PWD/plugins/indico-plugin-themes-awesome/
+```
+
+Copying the Wheel Package generated to the Indico Production environment, executing the following command:
+
+```
+cp ../dist/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
+$ sudo chown indico:www-data /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
+$ sudo chmod 750 /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
+```
+
+Inside the Indico Production environment, install the Wheel Package, executing the following command:
+
+```
+(indico) $ pip install /path/to/production/env/indico_plugin_themes_awesome-0.0.1-py3-none-any.whl
+```
 
 ## Use it
 
