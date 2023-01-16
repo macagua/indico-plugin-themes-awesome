@@ -8,9 +8,9 @@ Following are some screenshots about Awesome Theme:
 
 ### Timetable view for Events
 
-![Timetable view for Events](https://raw.githubusercontent.com/macagua/indico-plugin-themes-awesome/main/docs/screenshot_timetable_view_events.png)
+![Timetable View for Events](https://raw.githubusercontent.com/macagua/indico-plugin-themes-awesome/main/docs/screenshot_timetable_view_events.png)
 
-**Timetable view for Events**
+**Timetable View for Events**
 
 ## What Indico version is supported?
 
@@ -72,12 +72,20 @@ indico db --plugin themes_awesome upgrade
 You can check the Awesome Themes Plugin installation go to ``Administration`` > ``Plugins`` > ``Other``,
 then if exists an ``Awesome Themes`` reference, is ok installed it.
 
+![Plugins Administration View](https://raw.githubusercontent.com/macagua/indico-plugin-themes-awesome/main/docs/screenshot_plugins_admin.png)
+
+**Plugins Administration View**
+
 
 ## Use it
 
 To use the Awesome Theme for an Event, create an Event and save it, then go to the *management area of this event* >
 ``Customization`` > ``Layout`` > ``Timetable`` > ``Theme`` here you can select the ``Foo Theme`` option, and got to
 click on Save button at the **Theme** section botton.
+
+![Layout Manage for Events View](https://raw.githubusercontent.com/macagua/indico-plugin-themes-awesome/main/docs/screenshot_events_manage_layout.png)
+
+**Layout Manage for Events View**
 
 
 ## About Indico Software
