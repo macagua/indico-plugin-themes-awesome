@@ -3,3 +3,4 @@ definitions:
     <<: *standard
     stylesheet: foo.scss
     title: Foo Theme
+
